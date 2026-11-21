@@ -10,43 +10,43 @@
   "entries": [
     {
       "control": "validate_input",
-      "principle": "Safety, proportionality, and prevention of harm",
-      "principle_source": "UNESCO Recommendation on the Ethics of AI (2021), principles of proportionality/do no harm and safety/security",
-      "instrument": "Law of the Republic of Kazakhstan No. 94-V, On Personal Data and Their Protection (2013)",
-      "provision": "Article 7(8)-(9)",
-      "why_here": "Input validation rejects impossible values before model processing, preventing invalid data from producing unreliable scholarship decisions and limiting processing to relevant, legitimate purposes."
+      "principle": "Safety and security; proportionality and Do No Harm",
+      "principle_source": "UNESCO Recommendation on the Ethics of AI (2021), paragraphs 25-27; Law of the Republic of Kazakhstan On Artificial Intelligence No. 230-VIII (17 November 2025), Articles 11(1)-(3) and 18(1)",
+      "instrument": "Law of the Republic of Kazakhstan On Artificial Intelligence No. 230-VIII of 17 November 2025",
+      "provision": "Articles 11(1)-(3) and 18(1)(1)-(4)",
+      "why_here": "The refusal-path test rejected the impossible GPA 9.9 and exam score -5 before a model call; validation is an engineering risk-control measure under general safety and risk-management duties, not a statutory range rule."
     },
     {
       "control": "blind",
       "principle": "Fairness and non-discrimination",
-      "principle_source": "UNESCO Recommendation on the Ethics of AI (2021), fairness and non-discrimination principle",
-      "instrument": "Constitution of the Republic of Kazakhstan",
-      "provision": "Article 14",
-      "why_here": "Baseline matched-pair testing showed outcome flips and score differences for name and university attributes, so these irrelevant fields are hidden to reduce proxy discrimination."
+      "principle_source": "UNESCO Recommendation on the Ethics of AI (2021), paragraphs 28-29; Law of the Republic of Kazakhstan On Artificial Intelligence No. 230-VIII (17 November 2025), Article 6",
+      "instrument": "Constitution of the Republic of Kazakhstan adopted by referendum on 15 March 2026",
+      "provision": "Article 16(1)-(2)",
+      "why_here": "Baseline matched-pair tests observed flips for name_language (2/40), gender_coded_name (4/40), and university (1/40); blinding reduces direct exposure to irrelevant fields, while zero after-flips are by construction and do not prove general fairness."
     },
     {
       "control": "refuse",
-      "principle": "Proportionality, do no harm, privacy, and legitimate purpose",
-      "principle_source": "UNESCO Recommendation on the Ethics of AI (2021), proportionality/do no harm and privacy principles",
-      "instrument": "Law of the Republic of Kazakhstan No. 94-V, On Personal Data and Their Protection (2013)",
-      "provision": "Articles 7(1) and 7(8)",
-      "why_here": "The harness refuses prohibited purposes, minors, missing consent, and invalid inputs instead of processing requests that are unsafe, unauthorized, or outside the legitimate scholarship-screening purpose."
+      "principle": "Legitimate purpose; privacy and data protection; fairness and non-discrimination",
+      "principle_source": "UNESCO Recommendation on the Ethics of AI (2021), paragraphs 25-29 and 32-34; Law of the Republic of Kazakhstan On Artificial Intelligence No. 230-VIII, Article 6",
+      "instrument": "Law of the Republic of Kazakhstan On Personal Data and Their Protection No. 94-V of 21 May 2013",
+      "provision": "Articles 7(1), 7(8)-(9), 8(1), and 14",
+      "why_here": "Part 4 refused 4/6 test requests for a prohibited purpose, a minor, no consent, and invalid inputs; the blanket under-18 rule is a prototype policy rather than a directly stated statutory requirement and needs fund-specific review."
     },
     {
       "control": "log",
-      "principle": "Responsibility, accountability, transparency, and traceability",
-      "principle_source": "UNESCO Recommendation on the Ethics of AI (2021), paragraphs 42-43",
-      "instrument": "UNESCO Recommendation on the Ethics of AI (2021)",
-      "provision": "Paragraphs 42-43",
-      "why_here": "The structured decision log records the decision, controls, reason code, model and prompt versions, fields shown or withheld, and timestamp to support auditing and accountability."
+      "principle": "Transparency and explainability; responsibility and accountability; privacy and data protection",
+      "principle_source": "UNESCO Recommendation on the Ethics of AI (2021), paragraphs 32-34 and 37-43; Law of the Republic of Kazakhstan On Artificial Intelligence No. 230-VIII, Articles 8(1)-(2) and 15(2)(3)",
+      "instrument": "Law of the Republic of Kazakhstan On Artificial Intelligence No. 230-VIII of 17 November 2025",
+      "provision": "Articles 8(1)-(2) and 15(2)(3)",
+      "why_here": "The submitted JSONL log contains 406 records with decisions, reason codes, controls, fields shown/withheld, model metadata, input hash, and timestamps; it supports lifecycle accountability and documentation, but the law does not prescribe this exact JSONL format."
     },
     {
       "control": "escalate",
-      "principle": "Human oversight and determination",
-      "principle_source": "UNESCO Recommendation on the Ethics of AI (2021), paragraphs 35-36",
-      "instrument": "UNESCO Recommendation on the Ethics of AI (2021)",
-      "provision": "Paragraphs 35-36",
-      "why_here": "Borderline or conflicting decisions are escalated to a human reviewer because the scholarship outcome can affect applicants and ultimate responsibility must remain with people."
+      "principle": "Human oversight and determination; responsibility and accountability",
+      "principle_source": "UNESCO Recommendation on the Ethics of AI (2021), paragraphs 35-36 and 42-43; Law of the Republic of Kazakhstan On Artificial Intelligence No. 230-VIII, Article 8(1)-(2)",
+      "instrument": "Digital Code of the Republic of Kazakhstan No. 255-VIII of 9 January 2026",
+      "provision": "Articles 5(3) and 43(4)(3)",
+      "why_here": "The harness escalated 58/400 measured profiles (14.5%) and flagged 2 additional refusal-path test requests; the notebook only records an escalation outcome and does not implement authorized-specialist reconsideration or an applicant-facing appeal process."
     }
   ]
 }
