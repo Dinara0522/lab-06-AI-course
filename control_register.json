@@ -1,0 +1,52 @@
+{
+  "harness_controls": [
+    "validate_input",
+    "blind",
+    "refuse",
+    "log",
+    "escalate"
+  ],
+  "format_problems": [],
+  "entries": [
+    {
+      "control": "validate_input",
+      "principle": "Safety, proportionality, and prevention of harm",
+      "principle_source": "UNESCO Recommendation on the Ethics of AI (2021), principles of proportionality/do no harm and safety/security",
+      "instrument": "Law of the Republic of Kazakhstan No. 94-V, On Personal Data and Their Protection (2013)",
+      "provision": "Article 7(8)-(9)",
+      "why_here": "Input validation rejects impossible values before model processing, preventing invalid data from producing unreliable scholarship decisions and limiting processing to relevant, legitimate purposes."
+    },
+    {
+      "control": "blind",
+      "principle": "Fairness and non-discrimination",
+      "principle_source": "UNESCO Recommendation on the Ethics of AI (2021), fairness and non-discrimination principle",
+      "instrument": "Constitution of the Republic of Kazakhstan",
+      "provision": "Article 14",
+      "why_here": "Baseline matched-pair testing showed outcome flips and score differences for name and university attributes, so these irrelevant fields are hidden to reduce proxy discrimination."
+    },
+    {
+      "control": "refuse",
+      "principle": "Proportionality, do no harm, privacy, and legitimate purpose",
+      "principle_source": "UNESCO Recommendation on the Ethics of AI (2021), proportionality/do no harm and privacy principles",
+      "instrument": "Law of the Republic of Kazakhstan No. 94-V, On Personal Data and Their Protection (2013)",
+      "provision": "Articles 7(1) and 7(8)",
+      "why_here": "The harness refuses prohibited purposes, minors, missing consent, and invalid inputs instead of processing requests that are unsafe, unauthorized, or outside the legitimate scholarship-screening purpose."
+    },
+    {
+      "control": "log",
+      "principle": "Responsibility, accountability, transparency, and traceability",
+      "principle_source": "UNESCO Recommendation on the Ethics of AI (2021), paragraphs 42-43",
+      "instrument": "UNESCO Recommendation on the Ethics of AI (2021)",
+      "provision": "Paragraphs 42-43",
+      "why_here": "The structured decision log records the decision, controls, reason code, model and prompt versions, fields shown or withheld, and timestamp to support auditing and accountability."
+    },
+    {
+      "control": "escalate",
+      "principle": "Human oversight and determination",
+      "principle_source": "UNESCO Recommendation on the Ethics of AI (2021), paragraphs 35-36",
+      "instrument": "UNESCO Recommendation on the Ethics of AI (2021)",
+      "provision": "Paragraphs 35-36",
+      "why_here": "Borderline or conflicting decisions are escalated to a human reviewer because the scholarship outcome can affect applicants and ultimate responsibility must remain with people."
+    }
+  ]
+}
